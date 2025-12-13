@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EveryWear</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://cdn.jsdelivr.net/npm/three@0.171.0/build/three.module.min.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.171.0/examples/jsm/"
+    }
+  }
+  </script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script src="https://kit.fontawesome.com/edbfd41333.js" crossorigin="anonymous"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+
+  <script src="static/js/index.js" type="module"></script>
+</head>
+
+<body>
+
+<section class="section head-section">
+  <div class="container is-max-desktop">
+    <div class="is-centered">
+      <div class="has-text-centered">
+        <h2 class="title is-2">Human Motion Estimation with Everyday Wearables</h2>
+        <!-- <p class="has-text-danger publisher">CVPR 2024, Highlight</p> -->
+
+        <div class="is-size-5">
+          <span class="author-block">
+            <a href="/" target="_blank">Siqi Zhu</a><sup>1*</sup>,</span>
+          <span class="author-block">
+            <a href="/" target="_blank">Yixuan Li</a><sup>1*</sup>,</span>
+          <span class="author-block">
+            <a href="/" target="_blank">Junfu Li</a><sup>1,2*</sup>,</span>
+          <span class="author-block">
+            <a href="/" target="_blank">Qi Wu</a><sup>1,2*</sup>,</span>
+          <br>
+          <span class="author-block">
+            <a href="https://silvester.wang/" target="_blank">Zan Wang</a><sup>1*</sup>,</span>
+          <span class="author-block">
+            <a href="/" target="_blank">Haozhe Ma</a><sup>3</sup>,</span>
+          <span class="author-block">
+            <a href="https://liangwei-bit.github.io/web/" target="_blank">Wei Liang</a><sup>1,2✉️</sup>,</span>
+        </div>
+
+        <div class="is-size-6">
+          <span class="author-block">
+            <sup>1</sup>Beijing Institute of Technology<br>
+            <sup>2</sup>Yangtze Delta Region Academy of Beijing Institute of Technology, Jiaxing<br>
+            <sup>3</sup>Shenzhen MSU-BIT University
+          </span>
+          <br>
+          <span class="eql-cntrb">
+            <sup>*</sup>indicates equal contribution &nbsp; <sup>✉️</sup>indicates corresponding author</span>
+        </div>
+
+        <div class="link-block">
+          <span>
+            <a href="/" target="_blank"
+              class="external-link button is-normal is-rounded is-outlined is-info">
+              <span class="icon">
+                <i class="ai ai-arxiv"></i>
+              </span>
+              <span>arXiv</span>
+            </a>
+          </span>
+
+          <span>
+            <a href="/" target="_blank"
+              class="external-link button is-normal is-rounded is-outlined is-danger">
+              <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>Paper</span>
+            </a>
+          </span>
+
+          <span>
+            <a href="/" target="_blank"
+              class="external-link button is-normal is-rounded is-outlined is-primary">
+              <span class="icon">
+                <i class="fas fa-file-pdf"></i>
+              </span>
+              <span>Supplementary</span>
+            </a>
+          </span>
+
+          <span>
+            <a href="/" target="_blank"
+              class="external-link button is-normal is-rounded is-outlined is-link">
+              <span class="icon">
+                <i class="fas fa-video"></i>
+              </span>
+              <span>Video</span>
+            </a>
+          </span>
+
+          <span>
+            <a href="https://github.com/BIT-PIE/EveryWear" target="_blank"
+              class="external-link button is-normal is-rounded is-outlined is-dark">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section content-section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-10">
+        <video  autoplay controls muted loop height="100%">
+          <source src="/" type="video/mp4">
+        </video>
+        <h6 class="subtitle is-6">
+          🧭 We .
+        </h6>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-12">
+        <h3 class="title is-3">⭐ Abstract</h3>
+        <div class="has-text-justified">
+          <p>
+            We present <strong>EveryWear</strong>, a lightweight and practical on-body human motion capture system that uses only everyday consumer wearables—a 
+            smartphone, smartwatch, earbuds, and smart glasses with built-in forward and downward cameras—without requiring any explicit calibration. To support 
+            real-world training and benchmarking, we introduce <strong>Ego-Elec</strong>, a 9-hour MoCap-annotated dataset spanning 56 daily activities across 17 
+            indoor and outdoor environments. Our multimodal teacher-student framework fuses egocentric visual cues with inertial data and is trained entirely on 
+            real-world recordings, avoiding the sim-to-real gap of prior methods.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">🎥 SMPL Model Viewer</h2>
+      <div class="field has-text-centered" style="margin-bottom: 1rem;">
+        <div class="control">
+          <div class="select is-medium">
+            <select id="glb-selector">
+              <option value="static/models/Arranging_chairs.glb">Arranging chairs</option>
+              <option value="static/models/Boxing.glb">Boxing</option>
+              <option value="static/models/Browsing_items.glb">Browsing items</option>
+              <option value="static/models/Browsing_sheet_music.glb">Browsing sheet music</option>
+              <option value="static/models/Carrying_something.glb">Carrying something</option>
+              <option value="static/models/Celebrating.glb">Celebrating</option>
+              <option value="static/models/Checking_out.glb">Checking out</option>
+              <option value="static/models/Collecting_documents.glb">Collecting documents</option>
+              <option value="static/models/Conducting_music.glb">Conducting music</option>
+              <option value="static/models/Cooking.glb">Cooking</option>
+              <option value="static/models/Discussing.glb">Discussing</option>
+              <option value="static/models/Distributing_materials.glb">Distributing materials</option>
+              <option value="static/models/Doing_housework.glb">Doing housework</option>
+              <option value="static/models/Drinking.glb">Drinking</option>
+              <option value="static/models/Expressing_respect.glb">Expressing respect</option>
+              <option value="static/models/Finding_a_seat_and_sitting_down.glb">Finding a seat and sitting down</option>
+              <option value="static/models/Going_shopping.glb">Going shopping</option>
+              <option value="static/models/Having_a_meal.glb">Having a meal</option>
+              <option value="static/models/Leaving_a_seat.glb">Leaving a seat</option>
+              <option value="static/models/Moving_things.glb">Moving things</option>
+              <option value="static/models/Packing_up_belongings.glb">Packing up belongings</option>
+              <option value="static/models/Playing_a_card_game.glb">Playing a card game</option>
+              <option value="static/models/Playing_badminton.glb">Playing badminton</option>
+              <option value="static/models/Playing_basketball.glb">Playing basketball</option>
+              <option value="static/models/Playing_billiards.glb">Playing billiards</option>
+              <option value="static/models/Playing_games.glb">Playing games</option>
+              <option value="static/models/Playing_soccer.glb">Playing soccer</option>
+              <option value="static/models/Playing_table_tennis.glb">Playing table tennis</option>
+              <option value="static/models/Playing_the_board_game.glb">Playing the board game</option>
+              <option value="static/models/Playing_the_drum_set.glb">Playing the drum set</option>
+              <option value="static/models/Playing_the_guitar.glb">Playing the guitar</option>
+              <option value="static/models/Playing_the_piano.glb">Playing the piano</option>
+              <option value="static/models/Raising_a_hand.glb">Raising a hand</option>
+              <option value="static/models/Reading_a_book.glb">Reading a book</option>
+              <option value="static/models/Reviewing_materials.glb">Reviewing materials</option>
+              <option value="static/models/Searching_for_something.glb">Searching for something</option>
+              <option value="static/models/Shooting_an_arrow.glb">Shooting an arrow</option>
+              <option value="static/models/Showing_frustration.glb">Showing frustration</option>
+              <option value="static/models/Stretching.glb">Stretching</option>
+              <option value="static/models/Taking_a_break.glb">Taking a break</option>
+              <option value="static/models/Taking_items.glb">Taking items</option>
+              <option value="static/models/Using_an_electronic_device.glb">Using an electronic device</option>
+              <option value="static/models/Wandering.glb">Wandering</option>
+              <option value="static/models/Waving.glb">Waving</option>
+              <option value="static/models/Writing.glb">Writing</option>
+              <!-- more -->
+            </select>
+          </div>
+        </div>
+      </div>
+      <div id="smpl-container"></div>
+    </div>
+    
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-12">
+        <h2 class="title is-3">🖼️ Dataset</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="video-gallery-container">
+            <button class="gallery-nav left" id="scrollLeftBtnStairs">&lt;</button>
+            <div class="video-viewport">
+              <div class="video-gallery" id="videoGalleryStairs">
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Arranging chairs.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Arranging chairs</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Boxing.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Boxing</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Browsing items.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Browsing items</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Browsing sheet music.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Browsing sheet music</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Carrying something.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Carrying something</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Celebrating.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Celebrating</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Checking out.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Checking out</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Collecting documents.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Collecting documents</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Conducting music.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Conducting music</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Cooking.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Cooking</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Discussing.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Discussing</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Distributing materials.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Distributing materials</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Doing housework.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Doing housework</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Dringking.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Dringking</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Expressing respect.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Expressing respect</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Going shopping.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Going shopping</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Having a meal.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Having a meal</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Leaving a seat.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Leaving a seat</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Moving things.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Moving things</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Packing up belongings.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Packing up belongings</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Playing badminton.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Playing badminton</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Playing basketball.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Playing basketball</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Playing billiards.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Playing billiards</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Playing card games.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Playing card games</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Playing chess.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Playing chess</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Playing games.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Playing games</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Playing soccer.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Playing soccer</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Playing table tennis.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Playing table tennis</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Playing the drum.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Playing the drum</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Playing the guitar.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Playing the guitar</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Playing the piano.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Playing the piano</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Rasing a hand.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Raising a hand</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Reading a book.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Reading a book</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Reviewing materials.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Reviewing materials</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Searching for something.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Searching for something</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Shooting an arrow.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Shooting an arrow</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Showing frustration.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Showing frustration</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Sitting down.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Sitting down</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Stretching.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Stretching</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Taking a break.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Taking a break</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Taking items.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Taking items</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Using a device.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Using a device</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Wandering.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Wandering</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Waving.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Waving</p>
+                </div>
+                <div class="video-item">
+                  <video class="gallery-video" src="static/videos/Writing.mp4" autoplay muted playsinline loop></video>
+                  <p class="video-caption">Writing</p>
+                </div>
+              </div>
+            </div>
+            <button class="gallery-nav right" id="scrollRightBtnStairs">&gt;</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
+      <div class="column is-10">
+        <h2 class="title is-3">👓 System</h2>
+        <figure class="image">
+          <img src="/" alt="System" style="width:100%; height:auto;">
+        </figure>
+        <div class="is-flex is-align-items-flex-start is-justify-content-center">
+          <span class="icon mr-1">⚙️</span>
+          <h6 class="subtitle is-6 has-text-justified">
+            Our system .
+          </h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
+      <div class="column is-10">
+        <h2 class="title is-3">💡 Method</h2>
+        <figure class="image">
+          <img src="static/videos/pipeline.png" alt="Pipeline" style="width:100%; height:auto;">
+        </figure>
+        <div class="is-flex is-align-items-flex-start is-justify-content-center">
+          <span class="icon mr-1">🔎</span>
+          <h6 class="subtitle is-6 has-text-justified">
+            We introduce a teacher-student framework that takes as input multi-view egocentric images from smart glasses together with inertial measurements, 
+            to estimate full-body human motion, including global translation and joint rotations over time. In addition, we incorporate a standard SLAM module 
+            to recover global head position.
+          </h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" style="margin-top: 3rem;">
+      <div class="column is-10">
+        <h2 class="title is-3">📊 Results</h2>
+        <video controls muted loop style="width: 100%; margin-top: 1rem;">
+          <source src="" type="video/mp4">
+        </video>
+        <div class="is-flex is-align-items-flex-start is-justify-content-center">
+          <span class="icon mr-1">📦</span>
+          <h6 class="subtitle is-6 has-text-justified">
+            Results .
+          </h6>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-12">
+        <h3 class="title has-text-centered is-3">📝 BibTeX</h3>
+        <div class="bibtex-block">
+          <pre><code>@inproceedings{zhu2025human,
+  title={Human Motion Estimation with Everyday Wearables},
+  author={Zhu, Siqi and Li, Yixuan and Li, Junfu and Wu, Qi and Wang, Zan and Ma, Haozhe and Liang, Wei},
+  booktitle={},
+  year={2025}
+}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8 has-text-centered">
+        <span>
+          This page was borrowed from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+        </span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+  
+</html>
