@@ -130,11 +130,15 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-10">
         <video  autoplay controls muted loop height="100%">
-          <source src="/" type="video/mp4">
+          <source src="static/videos/demo1.mp4" type="video/mp4">
         </video>
-        <h6 class="subtitle is-6">
-          🧭 We .
-        </h6>
+        <div class="is-flex is-align-items-flex-start is-justify-content-center">
+          <span class="icon mr-1">🧭</span>
+          <h6 class="subtitle is-6 has-text-justified">
+            The multimodal inputs constrain global displacement, effectively reducing visual drift and mitigating the error accumulation inherent in IMU-only 
+            methods. As a result, our model achieves low Root Position Error, enabling stable and reliable global trajectory tracking.
+          </h6>
+        </div>
       </div>
     </div>
 
@@ -445,12 +449,13 @@
       <div class="column is-10">
         <h2 class="title is-3">📊 Results</h2>
         <video controls muted loop style="width: 100%;">
-          <source src="" type="video/mp4">
+          <source src="static/videos/result.mp4" type="video/mp4">
         </video>
         <div class="is-flex is-align-items-flex-start is-justify-content-center">
           <span class="icon mr-1">📦</span>
           <h6 class="subtitle is-6 has-text-justified">
-            Results .
+            Compared to other baselines, our model achieves higher pose estimation accuracy and lower Root PE, demonstrating superior performance across 
+            both positional and pose-related metrics.
           </h6>
         </div>
       </div>
