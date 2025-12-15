@@ -36,13 +36,11 @@ Siqi Zhu*, [Yixuan Li*](https://yixxuan-li.github.io/), Junfu Li*, Qi Wu*,
   <img src="docs/imgs/demo.gif" alt="Demo">
 </div>
 
-## 📦 Installation
+## TODOs
 
-## 🛠 Usage
-
-### Training
-
-### Evaluation
+- [ ] Release installation guide.
+- [ ] Release training code.
+- [ ] Release evaluation code.
 ---
 
 ## 📜 References
