@@ -3,17 +3,18 @@
 # Human Motion Estimation with Everyday Wearables
 Siqi Zhu*, [Yixuan Li*](https://yixxuan-li.github.io/), Junfu Li*, Qi Wu*,
 [Zan Wang*](https://silvester.wang/), Haozhe Ma and [Wei Liang](https://liangwei-bit.github.io/web/)
+
+<p align="center">
+<a href='https://arxiv.org/abs/'><img src='https://img.shields.io/badge/ArXiv--red'></a>
+<a href='https://pie-lab.cn/EveryWear/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
+</p>
+
 <p align="center">
   <img src="docs/imgs/teaser.png" width="700" alt="teaser"/>
 </p>
 </div>
 
 > 🌟 <strong>EveryWear</strong>: A lightweight and practical tool to help you easily mocap with everyday wearables: a smartphone, smartwatch, earbuds, and smart glasses equipped with one forward-facing and two downward-facing cameras.
-
-<p align="center">
-<a href='https://arxiv.org/abs/'><img src='https://img.shields.io/badge/ArXiv--red'></a>
-<a href='https://pie-lab.cn/EveryWear/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
-</p>
 
 
 ---
