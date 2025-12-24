@@ -133,7 +133,6 @@ window.addEventListener('load', function() {
             currentModel.traverse((child) => {
                 if (child.isMesh && child.geometry && child.geometry.attributes.color) {
                     hasVertexColors = true;
-                    console.log("找到顶点颜色属性:", child.geometry.attributes.color);
                 }
             });
             
@@ -142,20 +141,18 @@ window.addEventListener('load', function() {
                     if (child.isMesh && child.geometry && child.geometry.attributes.color) {
                         if (child.material) {
                             const newMaterial = child.material.clone();
-                            // newMaterial.emissive = new THREE.Color(0x111111);  // 增加自发光
-                            // newMaterial.emissiveIntensity = 0.2;              // 自发光强度
+                            // newMaterial.emissive = new THREE.Color(0x111111);
+                            // newMaterial.emissiveIntensity = 0.2;
                             newMaterial.vertexColors = true;
                             newMaterial.needsUpdate = true;
-                            newMaterial.roughness = 0.6;      // 降低粗糙度
-                            newMaterial.metalness = 0.0;      // 无金属感
+                            newMaterial.roughness = 0.6;
+                            newMaterial.metalness = 0.0;
                             child.material = newMaterial;
                         }
                         child.geometry.attributes.color.needsUpdate = true;
                         child.geometry.attributes.position.needsUpdate = true;
                     }
                 });
-            } else {
-                console.warn("模型没有顶点颜色属性");
             }
             
             scene.add(currentModel);

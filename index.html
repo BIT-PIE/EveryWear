@@ -135,8 +135,8 @@
         <div class="is-flex is-align-items-flex-start is-justify-content-center">
           <span class="icon mr-1">🧭</span>
           <h6 class="subtitle is-6 has-text-justified">
-            The multimodal inputs constrain global displacement, effectively reducing visual drift and mitigating the error accumulation inherent in IMU-only 
-            methods. As a result, our model achieves low Root Position Error, enabling stable and reliable global trajectory tracking.
+            The complementary multimodal inputs enable accurate pose estimation, while fusing SLAM-based global camera poses with IMU data ensures low Root 
+            Position Error and stable global trajectory tracking, reducing visual drift and mitigating errors inherent in IMU-only methods.
           </h6>
         </div>
       </div>
@@ -460,7 +460,16 @@
     <div class="columns is-centered has-text-centered" style="margin-top: 1rem;">
       <div class="column is-10">
         <h2 class="title is-3">📊 Results</h2>
-        <video autoplay muted loop playsinline controls style="width: 100%;">
+        <figure class="image">
+          <img src="static/videos/result_table.png" alt="Dataset" style="width:100%; height:auto;">
+        </figure>
+        <!-- <div class="is-flex is-align-items-flex-start is-justify-content-center">
+          <span class="icon mr-1">🧮</span>
+          <h6 class="subtitle is-6 has-text-justified">
+            Evaluation of EveryWear on Ego-Elec.
+          </h6>
+        </div> -->
+        <video autoplay muted loop playsinline controls style="width: 100%; margin-top: 1rem;">
           <source src="static/videos/result.mp4" type="video/mp4">
         </video>
         <div class="is-flex is-align-items-flex-start is-justify-content-center">
