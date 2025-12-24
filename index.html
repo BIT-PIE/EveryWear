@@ -150,87 +150,84 @@
             We present <strong>EveryWear</strong>, a lightweight and practical on-body human motion capture system that uses only everyday consumer wearables—a 
             smartphone, smartwatch, earbuds, and smart glasses with built-in forward and downward cameras—without requiring any explicit calibration. To support 
             real-world training and benchmarking, we introduce <strong>Ego-Elec</strong>, a 9-hour MoCap-annotated dataset spanning 56 daily activities across 17 
-            indoor and outdoor environments. Our multimodal teacher-student framework fuses egocentric visual cues with inertial data and is trained entirely on 
-            real-world recordings, avoiding the sim-to-real gap of prior methods.
+            indoor and outdoor environments. Our multimodal teacher-student framework, trained entirely on real-world data, achieves more accurate pose estimation 
+            while avoiding the sim-to-real gap.
           </p>
         </div>
       </div>
-    </div>
-
-    <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">🎥 SMPL Model Viewer</h2>
-      <div class="field has-text-centered" style="margin-bottom: 1rem;">
-        <div class="control">
-          <div class="select is-medium">
-            <select id="glb-selector">
-              <option value="static/models/Arranging_chairs.glb">Arranging chairs</option>
-              <option value="static/models/Boxing.glb">Boxing</option>
-              <option value="static/models/Browsing_items.glb">Browsing items</option>
-              <option value="static/models/Browsing_sheet_music.glb">Browsing sheet music</option>
-              <option value="static/models/Carrying_something.glb">Carrying something</option>
-              <option value="static/models/Celebrating.glb">Celebrating</option>
-              <option value="static/models/Checking_out.glb">Checking out</option>
-              <option value="static/models/Collecting_documents.glb">Collecting documents</option>
-              <option value="static/models/Conducting_music.glb">Conducting music</option>
-              <option value="static/models/Cooking.glb">Cooking</option>
-              <option value="static/models/Discussing.glb">Discussing</option>
-              <option value="static/models/Distributing_materials.glb">Distributing materials</option>
-              <option value="static/models/Doing_housework.glb">Doing housework</option>
-              <option value="static/models/Drinking.glb">Drinking</option>
-              <option value="static/models/Expressing_respect.glb">Expressing respect</option>
-              <option value="static/models/Going_shopping.glb">Going shopping</option>
-              <option value="static/models/Having_a_meal.glb">Having a meal</option>
-              <option value="static/models/Leaving_a_seat.glb">Leaving a seat</option>
-              <option value="static/models/Moving_things.glb">Moving things</option>
-              <option value="static/models/Packing_up_belongings.glb">Packing up belongings</option>
-              <option value="static/models/Playing_badminton.glb">Playing badminton</option>
-              <option value="static/models/Playing_basketball.glb">Playing basketball</option>
-              <option value="static/models/Playing_billiards.glb">Playing billiards</option>
-              <option value="static/models/Playing_card_games.glb">Playing card games</option>
-              <option value="static/models/Playing_chess.glb">Playing chess</option>
-              <option value="static/models/Playing_games.glb">Playing games</option>
-              <option value="static/models/Playing_soccer.glb">Playing soccer</option>
-              <option value="static/models/Playing_table_tennis.glb">Playing table tennis</option>
-              <option value="static/models/Playing_the_drum.glb">Playing the drum</option>
-              <option value="static/models/Playing_the_guitar.glb">Playing the guitar</option>
-              <option value="static/models/Playing_the_piano.glb">Playing the piano</option>
-              <option value="static/models/Raising_a_hand.glb">Raising a hand</option>
-              <option value="static/models/Reading_a_book.glb">Reading a book</option>
-              <option value="static/models/Reviewing_materials.glb">Reviewing materials</option>
-              <option value="static/models/Searching_for_something.glb">Searching for something</option>
-              <option value="static/models/Shooting_an_arrow.glb">Shooting an arrow</option>
-              <option value="static/models/Showing_frustration.glb">Showing frustration</option>
-              <option value="static/models/Sitting_down.glb">Sitting down</option>
-              <option value="static/models/Stretching.glb">Stretching</option>
-              <option value="static/models/Taking_a_break.glb">Taking a break</option>
-              <option value="static/models/Taking_items.glb">Taking items</option>
-              <option value="static/models/Using_an_electronic_device.glb">Using an electronic device</option>
-              <option value="static/models/Wandering.glb">Wandering</option>
-              <option value="static/models/Waving.glb">Waving</option>
-              <option value="static/models/Writing.glb">Writing</option>
-              <!-- more -->
-            </select>
-          </div>
-        </div>
-      </div>
-      <div id="smpl-container"></div>
     </div>
     
     <div class="columns is-centered has-text-centered">
       <div class="column is-12">
         <h2 class="title is-3">🖼️ Dataset</h2>
         <figure class="image">
-          <img src="static/videos/dataset.png" alt="Dataset" style="width:60%; height:auto; margin: 0 auto;">
+          <img src="static/videos/dataset.png" alt="Dataset" style="width:70%; height:auto; margin: 0 auto;">
         </figure>
-        <div style="width:60%; margin: 0 auto 1rem auto; display:flex; justify-content:center;">
+        <div style="width:70%; margin: 0 auto 1rem auto; display:flex; justify-content:center;">
           <div class="is-flex is-align-items-flex-start">
             <span class="icon mr-2" style="margin-top: 0.15em;">🏷️</span>
             <h6 class="subtitle is-6 has-text-centered" style="margin:0;">
-              Pie Chart: Distribution of Environments. <br>
-              Bar Chart: Distribution of Activity Types.
+              Pie Chart: Distribution of Environments. Bar Chart: Distribution of Activity Types.
             </h6>
           </div>
-        </div>        
+        </div>
+
+        <div class="field has-text-centered" style="margin-bottom: 0rem;">
+          <div class="control">
+            <div class="select is-medium">
+              <select id="glb-selector">
+                <option value="static/models/Arranging_chairs.glb">Arranging chairs</option>
+                <option value="static/models/Boxing.glb">Boxing</option>
+                <option value="static/models/Browsing_items.glb">Browsing items</option>
+                <option value="static/models/Browsing_sheet_music.glb">Browsing sheet music</option>
+                <option value="static/models/Carrying_something.glb">Carrying something</option>
+                <option value="static/models/Celebrating.glb">Celebrating</option>
+                <option value="static/models/Checking_out.glb">Checking out</option>
+                <option value="static/models/Collecting_documents.glb">Collecting documents</option>
+                <option value="static/models/Conducting_music.glb">Conducting music</option>
+                <option value="static/models/Cooking.glb">Cooking</option>
+                <option value="static/models/Discussing.glb">Discussing</option>
+                <option value="static/models/Distributing_materials.glb">Distributing materials</option>
+                <option value="static/models/Doing_housework.glb">Doing housework</option>
+                <option value="static/models/Drinking.glb">Drinking</option>
+                <option value="static/models/Expressing_respect.glb">Expressing respect</option>
+                <option value="static/models/Going_shopping.glb">Going shopping</option>
+                <option value="static/models/Having_a_meal.glb">Having a meal</option>
+                <option value="static/models/Leaving_a_seat.glb">Leaving a seat</option>
+                <option value="static/models/Moving_things.glb">Moving things</option>
+                <option value="static/models/Packing_up_belongings.glb">Packing up belongings</option>
+                <option value="static/models/Playing_badminton.glb">Playing badminton</option>
+                <option value="static/models/Playing_basketball.glb">Playing basketball</option>
+                <option value="static/models/Playing_billiards.glb">Playing billiards</option>
+                <option value="static/models/Playing_card_games.glb">Playing card games</option>
+                <option value="static/models/Playing_chess.glb">Playing chess</option>
+                <option value="static/models/Playing_games.glb">Playing games</option>
+                <option value="static/models/Playing_soccer.glb">Playing soccer</option>
+                <option value="static/models/Playing_table_tennis.glb">Playing table tennis</option>
+                <option value="static/models/Playing_the_drum.glb">Playing the drum</option>
+                <option value="static/models/Playing_the_guitar.glb">Playing the guitar</option>
+                <option value="static/models/Playing_the_piano.glb">Playing the piano</option>
+                <option value="static/models/Raising_a_hand.glb">Raising a hand</option>
+                <option value="static/models/Reading_a_book.glb">Reading a book</option>
+                <option value="static/models/Reviewing_materials.glb">Reviewing materials</option>
+                <option value="static/models/Searching_for_something.glb">Searching for something</option>
+                <option value="static/models/Shooting_an_arrow.glb">Shooting an arrow</option>
+                <option value="static/models/Showing_frustration.glb">Showing frustration</option>
+                <option value="static/models/Sitting_down.glb">Sitting down</option>
+                <option value="static/models/Stretching.glb">Stretching</option>
+                <option value="static/models/Taking_a_break.glb">Taking a break</option>
+                <option value="static/models/Taking_items.glb">Taking items</option>
+                <option value="static/models/Using_an_electronic_device.glb">Using an electronic device</option>
+                <option value="static/models/Wandering.glb">Wandering</option>
+                <option value="static/models/Waving.glb">Waving</option>
+                <option value="static/models/Writing.glb">Writing</option>
+                <!-- more -->
+              </select>
+            </div>
+          </div>
+        </div>
+        <div id="smpl-container"></div>
+     
         <div id="results-carousel" class="carousel results-carousel">
           <div class="video-gallery-container">
             <button class="gallery-nav left" id="scrollLeftBtnStairs">&lt;</button>
@@ -460,15 +457,15 @@
     <div class="columns is-centered has-text-centered" style="margin-top: 1rem;">
       <div class="column is-10">
         <h2 class="title is-3">📊 Results</h2>
+        <div class="is-flex is-align-items-flex-start is-justify-content-center">
+          <span class="icon mr-1">🧮</span>
+          <h6 class="subtitle is-6 has-text-justified">
+            Performance of EveryWear and other Baselines on Ego-Elec.
+          </h6>
+        </div>
         <figure class="image">
           <img src="static/videos/result_table.png" alt="Dataset" style="width:100%; height:auto;">
         </figure>
-        <!-- <div class="is-flex is-align-items-flex-start is-justify-content-center">
-          <span class="icon mr-1">🧮</span>
-          <h6 class="subtitle is-6 has-text-justified">
-            Evaluation of EveryWear on Ego-Elec.
-          </h6>
-        </div> -->
         <video autoplay muted loop playsinline controls style="width: 100%; margin-top: 1rem;">
           <source src="static/videos/result.mp4" type="video/mp4">
         </video>
