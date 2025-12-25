@@ -5,7 +5,7 @@ Siqi Zhu*, [Yixuan Li*](https://yixxuan-li.github.io/), Junfu Li*, Qi Wu*,
 [Zan Wang*](https://silvester.wang/), Haozhe Ma and [Wei Liang](https://liangwei-bit.github.io/web/)
 
 <p align="center">
-<a href='https://arxiv.org/abs/'><img src='https://img.shields.io/badge/ArXiv--red'></a>
+<a href='https://arxiv.org/abs/2512.21209'><img src='https://img.shields.io/badge/ArXiv--red'></a>
 <a href='https://pie-lab.cn/EveryWear/'><img src='https://img.shields.io/badge/Project-Page-Green'></a>
 </p>
 
