@@ -46,10 +46,10 @@ Siqi Zhu*, [Yixuan Li*](https://yixxuan-li.github.io/), Junfu Li*, Qi Wu*,
 ## 📜 References
 If you find this project helpful, please consider citing our work:
 ```
-@article{zhu2025human,
+@article{zhu2025humanmotionestimationeveryday,
   title={Human Motion Estimation with Everyday Wearables},
   author={Zhu, Siqi and Li, Yixuan and Li, Junfu and Wu, Qi and Wang, Zan and Ma, Haozhe and Liang, Wei},
-  journal={arXiv preprint arXiv:},
+  journal={arXiv preprint arXiv:2512.21209},
   year={2025}
 }
 ```
